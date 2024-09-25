@@ -9,6 +9,8 @@
     #Mytext {
       padding: 7px 20px;
       border-radius: 3px;
+      border-color: yellow;
+      border-style: solid;
     }
 
     #Mysubmit {
@@ -26,10 +28,15 @@
       cursor: pointer;
       margin-right: 5px;
     }
+   .Myh3{
+     text-align: center;
+     color: forestgreen;
+   }
   </style>
 </head>
 
 <body>
+  <h3 class="Myh3">Welcome to pronhub<br>by Rx</h3>
   <label>Enter Your Age:</label><br><br>
   <input type="number" id="Mytext" placeholder="Enter age">
   <button type="submit" id="Mysubmit">Submit</button>
@@ -53,17 +60,72 @@
         newWindow.document.write(`
         <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Teast</title>
+  <title>Cool Videos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    h3{
+      color: #333;
+margin-bottom: 10px;
+text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 15px 0;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 18px;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
-
 <body>
-  <a href="https://rxmha.b-cdn.net/The%20biggest%20ass%20Ive%20ever%20fucked%20%F0%9F%8D%91%20-%20AdaKham%20%5Bwww.saveporn.net%5D.mp4">Video here</a>
+  <section class="video-container">
+    <h3>This Web is Made By Rx</h3>
+    <h2>Featured Videos</h2>
+    <ul>
+      <li><a href="https://rxmha.b-cdn.net/The%20biggest%20ass%20Ive%20ever%20fucked%20%F0%9F%8D%91%20-%20AdaKham%20%5Bwww.saveporn.net%5D.mp4">Video 1: Fast Fuck🥵🥵</a></li>
+      <li><a href="#">Video 2: Hot Girl🥳🍑</a></li>
+      <li><a href="#">Video 3: Russian🍑🍓</a></li>
+    </ul>
+  </section>
 </body>
-
 </html>
         `);
       } else if (age >= 100) {
