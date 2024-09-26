@@ -58,11 +58,12 @@
         // If age is 18 or older, create a new window and load the content
         const newWindow = window.open("", "_blank");
         newWindow.document.write(`
-        <!DOCTYPE html>
-<html>
+        
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cool Videos</title>
   <style>
     body {
@@ -72,61 +73,158 @@
       background-color: #f5f5f5;
     }
 
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px;
+      background-color: #333;
+    }
+
+    .container {
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      margin: 0 20px;
+    }
+
+    .bar1, .bar2, .bar3 {
+      width: 30px;
+      height: 5px;
+      background-color: #fff;
+      margin: 5px 0;
+      transition: 0.4s;
+    }
+
+    .menu-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      padding: 10px;
+      list-style: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .menu-dropdown li {
+      margin: 5px 0;
+    }
+
+    .menu-dropdown a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px 10px;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .menu-dropdown a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+
+    .change .bar2 {
+      opacity: 0;
+    }
+
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+
     .video-container {
       max-width: 800px;
       margin: 40px auto;
       padding: 20px;
       background-color: #fff;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    h2 {
-      color: #333;
-      margin-bottom: 30px;
+    .h2, .h2-2 {
       text-align: center;
-    }
-    h3{
       color: #333;
-margin-bottom: 10px;
-text-align: center;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .span {
+      background-color: orange;
+      color: #000;
+      padding: 4px;
+      border-radius: 6px;
     }
 
-    li {
-      margin: 15px 0;
+    /* Click animation */
+    .menu-dropdown a.clicked {
+      animation: clickEffect 0.3s forwards;
     }
 
-    a {
-      color: #007bff;
-      text-decoration: none;
-      font-size: 18px;
-      display: block;
-      padding: 10px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+    @keyframes clickEffect {
+      transform: scale(1.1);
+      background-color: #d0d0d0;
     }
-
-    a:hover {
-      background-color: #f0f0f0;
-    }
+    #src{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.sub{
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid green;
+  background-color: forestgreen;
+  cursor: pointer;
+}
   </style>
 </head>
 <body>
-  <section class="video-container">
-    <h3>This Web is Made By Rx</h3>
-    <h2>Featured Videos</h2>
-    <ul>
-      <li><a href="https://go.screenpal.com/watch/cZQO66VSk1c">Video 1: Hot girl🍑</a></li>
-      <li><a href="https://www.dropbox.com/scl/fi/4y3kzmve2wzky7j9jiuyd/WEEET-PUSSY-SQUUUUUIRTING-The-BEST-SQUIRT-COMPILATION-www.yesdownloader.com.mp4?rlkey=p1c18cqocpxwvmolzq8bfdqia&st=cu1ukfpl&dl=0">Video 2: Fast Fuck🥵🍑</a></li>
-      <li><a href="https://rxmha.b-cdn.net/%F0%9F%A4%ACLeave%20me%20alone%20Im%20cooking%20No%2C%20Im%20fucking%20pussy%F0%9F%A5%B0A%20lot%20of%20sperm%20-%20applau%20%5Bwww.yesdownloader.com%5D.mp4">Video 3: Russian🍓🍑</a></li>
+
+<div class="header">
+  <div class="container" onclick="toggleMenu(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <ul class="menu-dropdown">
+      <li><a href="#home" onclick="animateClick(this)">Home</a></li>
+      <li><a href="#about" onclick="animateClick(this)">About Us</a></li>
+      <li><a href="#contact" onclick="animateClick(this)">Contact</a></li>
     </ul>
-  </section>
+  </div>
+</div>
+<h2 class="h2-2">RX <span class="span">HUB</span></h2>
+
+<section class="video-container">
+    <input type="search" id="src" placeholder="Search video">
+  <button type="submit" class="sub">Search</button><i class="fa fa-search"></i>
+  <h2 class="h2">Featured Videos</h2>
+ <h1 style="text-align: center">Video 1</h1>
+
+
+  <iframe src="https://www.pornhub.com/embed/6504d76d0a703" frameborder="0" width="330" height="187" scrolling="no" allowfullscreen></iframe>
+  <h4>Sexy Big Ass Babe in Sweatpants wants you to FUCK HER HARD from behind</h4>
+  <p>178M Views | <span>👍98%</span> | <span>6 Month ago</span></p><br><br>
+
+
+  <iframe src="https://www.pornhub.com/embed/668fc3b76c6c8" frameborder="0" width="330" height="187" scrolling="no" allowfullscreen></iframe>
+  <h4>WEEET PUSSY SQUUUUUIRTING !!! the BEST SQUIRT COMPILATION!</h4>
+  <p>30M Views | <span>👍67%</span> | <span>3 Month ago</span></p><br><br>
+
+
+  <iframe src="https://www.pornhub.com/embed/662569e48bdbe" frameborder="0" width="330" height="187" scrolling="no" allowfullscreen></iframe>
+  <h4>I like to Fuck my best Friend's Boyfriend Hard while she's away - Valeria Sladkih</h4>
+  <p>130M Views | <span>👍27%</span> | <span>2 Month ago</span></p><br><br>
+
+
+  <iframe src="https://www.pornhub.com/embed/662568305175d" frameborder="0" width="330" height="187" scrolling="no" allowfullscreen></iframe>
+  <h4>Fucking my Stepsister and Cumming on her Ass. Great Holes - Deluxe_Bitch</h4>
+  <p>10M Views | <span>👍47%</span> | <span>2 Month ago</span></p><br><br>
+</section>
 </body>
 </html>
+
+
         `);
       } else if (age >= 100) {
         result.textContent = "You are too old.";
